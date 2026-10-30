@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  udp-server:
+    build:
+      context: ./udp_agario
+      dockerfile: Dockerfile
+    container_name: udp_agario_server
+    ports:
+      - "5555:5555/udp"   # UDP port mapping requires /udp
+    restart: unless-stopped
+
+  tcp-server:
+    build:
+      context: ./tcp_draw_guess
+      dockerfile: Dockerfile
+    container_name: tcp_draw_server
+    ports:
+      - "6666:6666"       # TCP port mapping
+    restart: unless-stopped

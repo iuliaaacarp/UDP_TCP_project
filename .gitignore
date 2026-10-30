@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# macOS system files
+.DS_Store
+
+# IDE configs
+.idea/
+.vscode/
+
+# Local compiled binaries (Docker builds inside containers)
+server_tcp
+server_udp
+a.out
+*.o
